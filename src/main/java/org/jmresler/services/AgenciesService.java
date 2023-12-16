@@ -1,11 +1,11 @@
-package org.jmresler.jpa.services;
+package org.jmresler.services;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jmresler.jpa.exceptions.AgenciesNotFoundException;
-import org.jmresler.jpa.model.dtos.AgenciesDTO;
-import org.jmresler.jpa.model.mappers.AgenciesMapper;
-import org.jmresler.jpa.model.Agencies;
-import org.jmresler.jpa.model.dao.AgenciesRepository;
+import org.jmresler.exceptions.AgenciesNotFoundException;
+import org.jmresler.model.dtos.AgenciesDTO;
+import org.jmresler.model.mappers.AgenciesMapper;
+import org.jmresler.model.Agencies;
+import org.jmresler.model.dao.AgenciesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

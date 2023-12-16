@@ -1,4 +1,4 @@
-package org.jmresler.jpa;
+package org.jmresler;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

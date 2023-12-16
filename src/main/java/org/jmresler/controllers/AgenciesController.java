@@ -1,8 +1,8 @@
-package org.jmresler.jpa.controllers;
+package org.jmresler.controllers;
 
-import org.jmresler.jpa.model.Agencies;
-import org.jmresler.jpa.model.dtos.AgenciesDTO;
-import org.jmresler.jpa.services.AgenciesService;
+import org.jmresler.model.Agencies;
+import org.jmresler.model.dtos.AgenciesDTO;
+import org.jmresler.services.AgenciesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RequestMapping(path = AgenciesController.PATH)
 @RestController
+@RequestMapping(path = AgenciesController.PATH)
 public class AgenciesController {
 
     public static final String PATH = "/agencies";
@@ -22,15 +22,14 @@ public class AgenciesController {
     @Autowired
     protected AgenciesService service;
 
-    @GetMapping(path = "/id/{id}",
-            consumes = MediaType.APPLICATION_JSON_VALUE,
+    @GetMapping(path = "/byid/{id}",
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Agencies> getAgenciesById(@PathVariable("id") final Integer id) {
         var agencies = service.findAgenciesById(id);
         return ResponseEntity.ok(agencies);
     }
 
-    @GetMapping(path = "/ori/{ori}", consumes = MediaType.APPLICATION_JSON_VALUE,
+    @GetMapping(path = "/byori/{ori}",
     produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<AgenciesDTO>> getAgenciesByOri(@PathVariable("ori") final String ori) {
         var agenciesList = service.findAgenciesByOri(ori);

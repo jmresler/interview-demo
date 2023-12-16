@@ -1,4 +1,4 @@
-package org.jmresler.jpa.controllers;
+package org.jmresler.controllers;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 

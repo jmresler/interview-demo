@@ -5,5 +5,7 @@ server:
 spring:
   application:
     name: web
+  banner:
+    location: banner.txt
   profiles:
     active: ${RUNTIME_ENV:dev}

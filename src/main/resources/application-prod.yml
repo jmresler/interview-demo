@@ -14,7 +14,6 @@ spring:
     hikari:
       transaction-isolation: TRANSACTION_READ_UNCOMMITTED
   jpa:
-    database: postgresql
     generate-ddl: true
     open-in-view: false
     properties:

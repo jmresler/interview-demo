@@ -1,6 +1,6 @@
-package org.jmresler.jpa.model.dao;
+package org.jmresler.model.dao;
 
-import org.jmresler.jpa.model.Agencies;
+import org.jmresler.model.Agencies;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
