@@ -1,0 +1,23 @@
+logging:
+  file:
+    name: logs/${spring.application.name}.log
+  level:
+    root: warn
+    '[org.jmresler.jpa]': info
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/nibrs
+    username: postgres
+    password: password
+    hikari:
+      transaction-isolation: TRANSACTION_READ_UNCOMMITTED
+  jpa:
+    generate-ddl: true
+    open-in-view: false
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true

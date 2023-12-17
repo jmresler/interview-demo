@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /v1/${spring.application.name}
+
+spring:
+  application:
+    name: web
+  banner:
+    location: banner.txt
+  profiles:
+    active: ${RUNTIME_ENV:dev}
